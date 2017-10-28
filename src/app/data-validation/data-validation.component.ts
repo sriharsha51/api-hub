@@ -14,17 +14,19 @@ export class DataValidationComponent implements OnInit {
   messageClass: boolean = false;
   results;
 
-  number: string;
-  NumMessage: string;
-  NumMessageClass: boolean = false;
-  NumLoadingResults: boolean = false;
-  NumResults;
+  // there is no support for http protocols for these APIs
+  // number: string;
+  // NumMessage: string;
+  // NumMessageClass: boolean = false;
+  // NumLoadingResults: boolean = false;
+  // NumResults;
 
-  language: string;
-  LanMessage: string;
-  LanLoadingResults: boolean =false;
-  LanMessageClass: boolean = false;
-  LanResults;
+  // language: string;
+  // LanMessage: string;
+  // LanLoadingResults: boolean =false;
+  // LanMessageClass: boolean = false;
+  // LanResults;
+  // there is no support for http protocols for these APIs
 
   constructor(private _apiService: APIService) { }
 
@@ -51,45 +53,47 @@ export class DataValidationComponent implements OnInit {
 
   }
 
-  checkNumber(number) {
-    if(!number) {
-      this.NumMessageClass = true;
-      this.NumMessage = "Please enter phone number to search."
-    } else {
-      this.NumLoadingResults= true;
-      this._apiService.checkNumber(number).subscribe(
-        data => {
-          this.NumResults = data;
-          this.NumLoadingResults = false;
-         },
-         error => {
-           this.NumMessageClass = true;
-           this.NumMessage = error;
-         }
-      )
-    }
+  // there is no support for http protocols for these APIs
+  // checkNumber(number) {
+  //   if(!number) {
+  //     this.NumMessageClass = true;
+  //     this.NumMessage = "Please enter phone number to search."
+  //   } else {
+  //     this.NumLoadingResults= true;
+  //     this._apiService.checkNumber(number).subscribe(
+  //       data => {
+  //         this.NumResults = data;
+  //         this.NumLoadingResults = false;
+  //        },
+  //        error => {
+  //          this.NumMessageClass = true;
+  //          this.NumMessage = error;
+  //        }
+  //     )
+  //   }
 
-  }
+  // }
 
-  checkLanguage(language) {
-    if(!language) {
-      this.LanMessageClass = true;
-      this.LanMessage = "Please enter text to search."
-    } else {
-      this.LanLoadingResults= true;
-      this._apiService.checkLanguage(encodeURI(language)).subscribe(
-        data => {
-          console.log(data);
-          this.LanResults = data;
-          this.LanLoadingResults = false;
-         },
-         error => {
-           this.LanMessageClass = true;
-           this.LanMessage = error;
-         }
-      )
-    }
-  }
+  // checkLanguage(language) {
+  //   if(!language) {
+  //     this.LanMessageClass = true;
+  //     this.LanMessage = "Please enter text to search."
+  //   } else {
+  //     this.LanLoadingResults= true;
+  //     this._apiService.checkLanguage(encodeURI(language)).subscribe(
+  //       data => {
+  //         console.log(data);
+  //         this.LanResults = data;
+  //         this.LanLoadingResults = false;
+  //        },
+  //        error => {
+  //          this.LanMessageClass = true;
+  //          this.LanMessage = error;
+  //        }
+  //     )
+  //   }
+  // }
+  // there is no support for http protocols for these APIs
 }
 
 

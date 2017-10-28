@@ -26,14 +26,15 @@ export class APIService {
     private mailBoxLayerURL: string = this.mailBoxLayer_API_URL + this.mailBoxLayer_API_KEY + '&email=';
     private mailBoxLayerURL_Format:string = '&smtp=1&format=1';
 
-    private numVerify_API_URL: string = 'http://apilayer.net/api/validate?access_key=';
-    private numVerify_API_KEY: string = 'e2007c7110fff3439179b5b655004b1e';
-    private numVerify_URL: string = this.numVerify_API_URL + this.numVerify_API_KEY + '&number=';
-    private format: string = '&format=1';
+    // private numVerify_API_URL: string = 'http://apilayer.net/api/validate?access_key=';
+    // private numVerify_API_KEY: string = 'e2007c7110fff3439179b5b655004b1e';
+    // private numVerify_URL: string = this.numVerify_API_URL + this.numVerify_API_KEY + '&number=';
+    // private format: string = '&format=1';
 
-    private languageLayer_API_URL: string = 'http://apilayer.net/api/detect?access_key=';
-    private languageLayer_API_KEY: string = '8d2d2537f1dbb47d78458537799e9351';
-    private languageLayer_URL: string = this.languageLayer_API_URL + this.languageLayer_API_KEY + '&query=';
+    // private languageLayer_API_URL: string = 'http://apilayer.net/api/detect?access_key=';
+    // private languageLayer_API_KEY: string = '8d2d2537f1dbb47d78458537799e9351';
+    // private languageLayer_URL: string = this.languageLayer_API_URL + this.languageLayer_API_KEY + '&query=';
+    // there is no support for http protocols for these APIs
 
     constructor(private _http: Http){ }
 
@@ -49,11 +50,11 @@ export class APIService {
         return this._http.get(this.mailBoxLayerURL + query + this.mailBoxLayerURL_Format).map(res => res.json())
     }
 
-    checkNumber(number) {
-        return this._http.get(this.numVerify_URL + number + this.format).map(res => res.json())
-    }
+    // checkNumber(number) {
+    //     return this._http.get(this.numVerify_URL + number + this.format).map(res => res.json())
+    // }
 
-    checkLanguage(query) {
-        return this._http.get(this.languageLayer_URL + query + this.format).map(res => res.json())
-    }
+    // checkLanguage(query) {
+    //     return this._http.get(this.languageLayer_URL + query + this.format).map(res => res.json())
+    // } there is no support for http protocols for these APIs
 }
