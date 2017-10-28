@@ -21,7 +21,7 @@ export class APIService {
 
     private cdnjsURL: string ="https://api.cdnjs.com/libraries?search=";
 
-    private mailBoxLayer_API_URL: string = 'http://apilayer.net/api/check?access_key=';
+    private mailBoxLayer_API_URL: string = 'https://apilayer.net/api/check?access_key=';
     private mailBoxLayer_API_KEY: string = '8ed78578dffa6ccae89db0f072e9144f';
     private mailBoxLayerURL: string = this.mailBoxLayer_API_URL + this.mailBoxLayer_API_KEY + '&email=';
     private mailBoxLayerURL_Format:string = '&smtp=1&format=1';
