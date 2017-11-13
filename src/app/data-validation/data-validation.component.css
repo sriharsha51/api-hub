@@ -1,21 +1,38 @@
 .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
 }
 
 .box {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 200px;
   flex: 1 1 200px;
   background: rgb(234, 237, 238);
   margin: 20px;
+  -webkit-box-shadow: 5px 5px 5px;
   box-shadow: 5px 5px 5px;
   text-align: center;
 }
 
+.box h3 {
+  font-size: 1.5em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
 .box p {
   padding: 20px 50px 20px 50px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left;
+  line-height: 1.5em;
 }
 
 input {
@@ -36,5 +53,7 @@ table {
 #format {
   text-align: center;
   margin: 0 auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
